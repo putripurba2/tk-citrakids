@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Data pendaftaran</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-list *ngIf="daftarPendaftar.length > 0; else tidakAdaData">
+    <ion-item *ngFor="let p of daftarPendaftar">
+      <ion-label>
+        <h2>
+          <ion-icon name="person-circle-outline"></ion-icon> {{ p.nama_lengkap }}
+        </h2>
+        <p><ion-icon name="male-female-outline"></ion-icon> <strong>Jenis Kelamin:</strong> {{ p.jenis_kelamin }}</p>
+        <p><ion-icon name="calendar-outline"></ion-icon> <strong>Tanggal Lahir:</strong> {{ p.tanggal_lahir }}</p>
+        <p><ion-icon name="people-outline"></ion-icon> <strong>Nama Ortu:</strong> {{ p.nama_ortu }}</p>
+        <p><ion-icon name="location-outline"></ion-icon> <strong>Alamat:</strong> {{ p.alamat }}</p>
+        <p><ion-icon name="call-outline"></ion-icon> <strong>No HP:</strong> {{ p.no_hp }}</p>
+        <p><ion-icon name="briefcase-outline"></ion-icon> <strong>Pekerjaan Ortu:</strong> {{ p.email }}</p>
+        <p><ion-icon name="time-outline"></ion-icon> <strong>Tanggal Daftar:</strong> {{ p.tanggal_daftar }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #tidakAdaData>
+    <ion-text color="medium">
+      <p class="ion-text-center">
+        <ion-icon name="alert-circle-outline"></ion-icon> Belum ada data pendaftar.
+      </p>
+    </ion-text>
+  </ng-template>
+
+</ion-content>

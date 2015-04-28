@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Formulir Pendaftaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Isi Data Anak</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="submitForm()">
+        <ion-list lines="inset">
+
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Nama Lengkap</ion-label>
+            <ion-input [(ngModel)]="formData.nama_lengkap" name="nama_lengkap" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="calendar-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Tanggal Lahir</ion-label>
+            <ion-datetime
+              name="tanggal_lahir"
+              [(ngModel)]="formData.tanggal_lahir"
+              presentation="date"
+              required
+            ></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="male-female-outline" slot="start"></ion-icon>
+            <ion-label>Jenis Kelamin</ion-label>
+            <ion-select [(ngModel)]="formData.jenis_kelamin" name="jenis_kelamin" placeholder="Pilih jenis kelamin" required>
+              <ion-select-option value="Laki-laki">Laki-laki</ion-select-option>
+              <ion-select-option value="Perempuan">Perempuan</ion-select-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="people-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Nama Orang Tua</ion-label>
+            <ion-input [(ngModel)]="formData.nama_ortu" name="nama_ortu" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="location-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Alamat</ion-label>
+            <ion-textarea [(ngModel)]="formData.alamat" name="alamat" autoGrow="true" required></ion-textarea>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="call-outline" slot="start"></ion-icon>
+            <ion-label position="floating">No. HP</ion-label>
+            <ion-input type="tel" [(ngModel)]="formData.no_hp" name="no_hp" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="briefcase-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Pekerjaan Org Tua</ion-label>
+            <ion-input type="email" [(ngModel)]="formData.email" name="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="time-outline" slot="start"></ion-icon>
+            <ion-label position="floating">Tanggal Daftar</ion-label>
+            <ion-datetime
+              name="tanggal_daftar"
+              [(ngModel)]="formData.tanggal_daftar"
+              presentation="date-time"
+              required
+            ></ion-datetime>
+          </ion-item>
+
+        </ion-list>
+
+        <ion-button expand="block" type="submit" class="ion-margin-top">
+          <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
+          DAFTAR
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

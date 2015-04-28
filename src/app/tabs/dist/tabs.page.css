@@ -1,0 +1,68 @@
+ion-tab-bar {
+  --background: #fff3e0;
+  /* Warna dasar tab bar: oranye muda */
+  border-top: 2px solid #ffe0b2;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 6px;
+  padding-bottom: 4px;
+}
+
+ion-tab-button {
+  --color: #8d6e63;
+  /* Warna teks default */
+  --color-selected: #ff5722;
+  /* Warna teks saat aktif */
+  --background-focused: #ffe0b2;
+  /* Efek fokus */
+  --ripple-color: #ffccbc;
+  font-weight: 500;
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-tab-button:hover {
+  transform: scale(1.05);
+}
+
+ion-tab-button.tab-selected {
+  font-weight: bold;
+}
+
+/* Warna ikon per tab */
+ion-tab-button:nth-child(1) ion-icon {
+  color: #ff7043;
+  /* Beranda - oranye terang */
+}
+
+ion-tab-button:nth-child(2) ion-icon {
+  color: #66bb6a;
+  /* Formulir - hijau */
+}
+
+ion-tab-button:nth-child(3) ion-icon {
+  color: #29b6f6;
+  /* Data Pendaftar - biru */
+}
+
+ion-tab-button:nth-child(4) ion-icon {
+  color: #ab47bc;
+  /* Tentang - ungu */
+}
+
+/* Teks label warna sama dengan ikon */
+ion-tab-button:nth-child(1).tab-selected ion-label {
+  color: #ff7043;
+}
+
+ion-tab-button:nth-child(2).tab-selected ion-label {
+  color: #66bb6a;
+}
+
+ion-tab-button:nth-child(3).tab-selected ion-label {
+  color: #29b6f6;
+}
+
+ion-tab-button:nth-child(4).tab-selected ion-label {
+  color: #ab47bc;
+}
+
+/*# sourceMappingURL=tabs.page.css.map */

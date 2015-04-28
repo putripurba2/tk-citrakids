@@ -1,0 +1,7 @@
+{
+  "name": "citrakids",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
